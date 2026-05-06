@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculators - G92 Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center;">📊 Calculators</h1>
+
+<div class="tabs">
+  <button onclick="openTab('profit')" class="tab-btn active">Profit</button>
+  <button onclick="openTab('sip')" class="tab-btn">SIP</button>
+</div>
+
+<!-- PROFIT -->
+<div id="profit" class="tab-content active">
+  <h2>Profit / Loss</h2>
+
+  <input id="buy" placeholder="Buy Price">
+  <input id="sell" placeholder="Sell Price">
+
+  <button onclick="calcProfit()">Calculate</button>
+
+  <p id="profitResult"></p>
+</div>
+
+<!-- SIP -->
+<div id="sip" class="tab-content">
+  <h2>SIP Calculator</h2>
+
+  <input id="monthly" placeholder="Monthly Investment">
+  <input id="rate" placeholder="Interest Rate (%)">
+  <input id="years" placeholder="Years">
+
+  <button onclick="calcSIP()">Calculate</button>
+
+  <p id="sipResult"></p>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
