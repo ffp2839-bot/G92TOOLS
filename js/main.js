@@ -7,6 +7,19 @@ function setName() {
     document.getElementById("dp").src = dpUrl;
   }
 }
+function generateCaption() {
+  let input = document.getElementById("captionInput").value;
+
+  let captions = [
+    "🔥 Living my best " + input + " life",
+    "💯 " + input + " vibes only",
+    "🚀 Hustle + " + input + " = success",
+    "😎 Stay real, stay " + input
+  ];
+
+  let random = captions[Math.floor(Math.random() * captions.length)];
+  document.getElementById("captionOutput").innerText = random;
+}
 // TAB SWITCH
 function openTab(tab) {
   let contents = document.getElementsByClassName("tab-content");
