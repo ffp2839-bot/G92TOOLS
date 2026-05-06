@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insta Tools - G92 Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center;">📸 Insta Tools</h1>
+
+<div class="tabs">
+  <button onclick="openTab('caption')" class="tab-btn active">Caption</button>
+  <button onclick="openTab('hashtag')" class="tab-btn">Hashtags</button>
+  <button onclick="openTab('thumbnail')" class="tab-btn">Thumbnail</button>
+  <button onclick="openTab('dp')" class="tab-btn">DP Viewer</button>
+</div>
+
+<!-- CAPTION -->
+<div id="caption" class="tab-content active">
+  <h2>Reel Caption Generator</h2>
+  <input id="captionInput" placeholder="Enter topic (e.g. gym, travel)">
+  <button onclick="generateCaption()">Generate</button>
+  <p id="captionOutput"></p>
+</div>
+
+<!-- HASHTAG -->
+<div id="hashtag" class="tab-content">
+  <h2>Hashtag Generator</h2>
+  <input id="hashtagInput" placeholder="Enter keyword">
+  <button onclick="generateHashtags()">Generate</button>
+  <p id="hashtagOutput"></p>
+</div>
+
+<!-- THUMBNAIL -->
+<div id="thumbnail" class="tab-content">
+  <h2>YouTube Thumbnail Downloader</h2>
+  <input id="ytUrl" placeholder="Paste YouTube link">
+  <button onclick="getThumbnail()">Get Thumbnail</button>
+  <br><br>
+  <img id="thumbImg" width="300">
+</div>
+
+<!-- DP -->
+<div id="dp" class="tab-content">
+  <h2>Instagram DP Viewer</h2>
+  <input id="username" placeholder="Enter username">
+  <button onclick="viewDP()">View</button>
+  <br><br>
+  <img id="dpImg" width="150">
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
