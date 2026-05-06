@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fake Chat - G92 Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="chat-container" id="chatBox">
+
+  <!-- Header -->
+  <div class="chat-header">
+    <img id="dp" src="https://via.placeholder.com/40">
+    <span id="chatName">Name</span>
+  </div>
+
+  <!-- Messages -->
+  <div class="chat-body" id="chatBody">
+    <div class="message received">
+      Hello 👋
+      <span class="time">10:00 AM</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Inputs -->
+<div class="controls">
+  <input id="name" placeholder="Enter Name">
+  <input id="message" placeholder="Enter Message">
+  <input id="time" placeholder="Time (e.g. 10:30 AM)">
+  <input id="dpInput" placeholder="DP Image URL">
+
+  <button onclick="setName()">Set Name</button>
+  <button onclick="sendMessage()">Send Message</button>
+  <button onclick="downloadChat()">Download</button>
+</div>
+
+<!-- html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
