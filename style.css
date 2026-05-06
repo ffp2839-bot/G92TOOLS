@@ -21,7 +21,63 @@
   display: flex;
   align-items: center;
 }
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
 
+.tab-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Inputs */
+input {
+  width: 80%;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Result */
+p {
+  font-weight: bold;
+  margin-top: 15px;
+}
 .chat-header img {
   width: 40px;
   height: 40px;
