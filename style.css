@@ -1,0 +1,119 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 100vh;
+  color: #333;
+
+  /* Animated gradient */
+  background: linear-gradient(270deg, #2563eb, #22c55e, #2563eb);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  animation: fadeDown 0.8s ease;
+}
+
+header span {
+  color: #22c55e;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  width: 90%;
+  max-width: 360px;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+
+  /* Entry animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover lift */
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Buttons */
+a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* Glow hover */
+a:hover {
+  background: #1e40af;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
+}
+
+/* Ripple effect */
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+}
+
+a:active::after {
+  width: 200px;
+  height: 200px;
+  }
