@@ -19,6 +19,28 @@ function generateCaption() {
 
   let random = captions[Math.floor(Math.random() * captions.length)];
   document.getElementById("captionOutput").innerText = random;
+} function generateHashtags() {
+  let input = document.getElementById("hashtagInput").value;
+
+  let tags = [
+    "#" + input,
+    "#viral",
+    "#trending",
+    "#reels",
+    "#explore",
+    "#instagood",
+    "#fyp",
+    "#love"
+  ];
+
+  document.getElementById("hashtagOutput").innerText =
+    tags.join(" ");
+} function viewDP() {
+  let username = document.getElementById("username").value;
+
+  // demo placeholder (real API later)
+  document.getElementById("dpImg").src =
+    "https://via.placeholder.com/150?text=" + username;
 }
 // TAB SWITCH
 function openTab(tab) {
